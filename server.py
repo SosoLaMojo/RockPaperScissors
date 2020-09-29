@@ -70,20 +70,3 @@ while True:
         games[gameId].ready = True
         p = 1
     start_new_thread(threaded_client, (conn, p, gameId))
-
-while True:
-    conn.address = s.accept()
-    print ("Connected to :", adress)
-
-    idCount = 1
-    p = 0
-    gameId = (idCount - 1)//2
-
-    start_new_thread(threaded_client, (conn))
-
-    if idCount % 2 == 1:
-        games [gameId] = Game (gameId)
-        print ("Creating a new game ...")
-    else:
-        games [gameId].ready = True
-        p = 1
